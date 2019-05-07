@@ -8,7 +8,7 @@ How to add it to your current uclibc-ng ?
 Create a patch with the already present getaddrinfo.c and resolv.c in uclibc(-ng)/libc/inet/
 
 for eg: 
-    patch getaddrinfo.c uclibc/libc/inet/getaddrinfo.c > my.patch
-    patch resolv.c uclibc/libc/inet/resolv.c > my2.patch
-    cp my.patch toolchain/uClibc/
+    diff -u uclibc/libc/inet/getaddrinfo.c <git_folder>/getaddrinfo.c > my.patch
+    diff -u uclibc/libc/inet/resolv.c <git_folder>/resolv.c > my2.patch
+    cp my.patch  toolchain/uClibc/
     cp my2.patch toolchain/uClibc/
